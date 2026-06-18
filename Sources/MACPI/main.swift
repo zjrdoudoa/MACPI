@@ -1,0 +1,3 @@
+import MACPICore
+
+MACPIMain.main()

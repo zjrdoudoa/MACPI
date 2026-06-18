@@ -1,0 +1,30 @@
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# Build outputs
+dist/
+DerivedData/
+*.dSYM/
+
+# Xcode user data
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+*.xcuserstate
+
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+__MACOSX/
+
+# Editors / temp files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
