@@ -11,6 +11,8 @@ MACPI 是一个面向 Apple Silicon MacBook Pro 的 macOS 性能策略守护程�
 
 守护模式下，MACPI 会通过 IOKit 监听电源状态变化：插电/拔电会立即切换策略；同时它会用 libproc 原生枚举进程，并按固定间隔补扫新启动的进程。为了避免 PID 复用误判，策略状态缓存使用 `pid + process start time` 作为进程身份；如果无法严格读取身份，MACPI 会保守跳过缓存和恢复。电池供电、禁用策略或 daemon 正常退出时，MACPI 会尝试恢复由本程序修改过的 Darwin background 和 nice 值。
 
+## 使用
+release里有发行版
 ## 构建
 
 ```sh
