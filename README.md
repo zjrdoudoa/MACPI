@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/readme/hero.png" width="820" alt="MACPI Screenshot">
+  <img src="assets/hero.png" width="820" alt="MACPI Screenshot">
 </p>
 
 ## 简介
