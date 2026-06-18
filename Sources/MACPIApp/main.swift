@@ -1471,11 +1471,12 @@ final class DashboardViewController: NSViewController, @unchecked Sendable {
             self.rebuildContent()
             self.contentStack.alphaValue = 0
             self.animateContentSlideIn(direction: self.contentTransitionDirection)
-            await NSAnimationContext.runAnimationGroup { context in
-                context.duration = 0.20
-                context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-                self.contentStack.animator().alphaValue = 1
-            }
+            NSAnimationContext.beginGrouping()
+            let context = NSAnimationContext.current
+            context.duration = 0.20
+            context.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+            self.contentStack.animator().alphaValue = 1
+            NSAnimationContext.endGrouping()
             self.updateSetupGuideOverlay(animated: true)
             self.contentReloadTask = nil
         }
